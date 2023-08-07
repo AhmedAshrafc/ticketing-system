@@ -38,7 +38,7 @@ export default function Header() {
         <div className="md:flex md:justify-center">
           <input
             type="text"
-            className="bg-gray-100 block w-full border-none focus:outline-none md:focus:w-[66%] transition-all py-2 px-6 lg:py-4 lg:px-8 rounded-full md:w-[60%]"
+            className="bg-gray-100 block w-11/12 focus:w-full border-none caret-yellow-400 outline-none md:focus:w-[66%] transition-all py-2 px-6 lg:py-4 lg:px-8 rounded-full md:w-[60%]"
             placeholder="Search..."
           />
         </div>
