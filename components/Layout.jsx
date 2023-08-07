@@ -3,11 +3,11 @@ import Sidebar from "./Sidebar";
 
 export default function Layout({ children }) {
   return (
-    <div className="flex min-h-screen md:p-8 md:gap-6 bg-gradient-to-b from-blue-400 to-blue-500">
+    <div className="flex min-h-screen  bg-gradient-to-b from-blue-400 to-blue-500">
       <Sidebar />
-      <div className="flex flex-col md:gap-6 w-full">
+      <div className="flex flex-col w-full">
         <Header />
-        <main className="bg-gray-100 shadow-2xl h-full">{children}</main>
+        <main className="bg-[#f1f5f9] shadow-2xl h-full">{children}</main>
       </div>
     </div>
   );
