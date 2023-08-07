@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <header className="bg-white p-4 text-sm flex flex-col gap-4">
+    <header className="bg-white p-4 text-sm flex flex-col gap-4 md:m-4">
       <h1 className="font-semibold uppercase md:text-md lg:text-lg">
         Alexandria Urology Hospital
       </h1>
