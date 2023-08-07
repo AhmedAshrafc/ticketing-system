@@ -36,41 +36,14 @@ export default function Header() {
           </div>
         </div>
 
-        <div className="md:flex md:justify-center relative">
-          <IoSearchOutline className="absolute left-0 text-gray-500" />
+        <div className="md:flex md:justify-center">
           <input
             type="text"
-            className="bg-gray-100 block w-full relative border-none focus:outline-none py-2 px-4 rounded-full lg:w-2/3"
+            className="bg-gray-100 block w-full border-none focus:outline-none py-2 px-6 lg:py-4 lg:px-8 rounded-full lg:w-2/3"
             placeholder="Search..."
           />
         </div>
       </div>
     </header>
-
-    // <header className="bg-white p-4 text-sm flex flex-col items-center gap-6 md:rounded-md shadow-xl">
-    //   <h1 className=" font-semibold uppercase md:text-md lg:text-lg">
-    //     Alexandria Urology Hospital
-    //   </h1>
-    //   <div className="w-full flex items-center justify-between ">
-    //     <div className="flex gap-2">
-    //       <span className="inline-block capitalize md:text-md lg:text-lg">
-    //         fake user
-    //       </span>
-    //       <Image
-    //         src={logo}
-    //         alt="User Profile Picture"
-    //         quality={100}
-    //         placeholder="blur"
-    //         priority
-    //         className="rounded-full shadow-sm cursor-pointer w-[40px]"
-    //       />
-    //     </div>
-
-    //     <div className="flex gap-4">
-    //       <IoLogOutOutline className="cursor-pointer md:text-lg" />
-    //       <IoInvertMode className="cursor-pointer md:text-lg" />
-    //     </div>
-    //   </div>
-    // </header>
   );
 }
