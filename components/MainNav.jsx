@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Script from "next/script";
 
+import { Tooltip } from "react-tooltip";
+
 import {
   IoHome,
   IoLogoAppleAr,
@@ -17,7 +19,12 @@ export default function MainNav() {
       />
 
       <ul className="flex flex-col gap-4">
-        <li>
+        <li data-tooltip-id="dashboard-tooltip" data-tooltip-place="right">
+          <Tooltip
+            id="dashboard-tooltip"
+            content="Dashboard"
+            style={{ zIndex: "9999" }}
+          />
           <Link
             href="/dashboard"
             className="flex items-center text-md text-black rounded-md p-2 transition-all hover:bg-[#081225] hover:text-white active:bg-[#081225]"
@@ -34,7 +41,12 @@ export default function MainNav() {
           </Link>
         </li>
 
-        <li>
+        <li data-tooltip-id="projects-tooltip" data-tooltip-place="right">
+          <Tooltip
+            id="projects-tooltip"
+            content="Projects"
+            style={{ zIndex: "9999" }}
+          />
           <Link
             href="/projects"
             className="flex items-center text-md text-black rounded-md p-2  transition-all hover:bg-[#081225] hover:text-white active:bg-[#081225]"
@@ -51,7 +63,12 @@ export default function MainNav() {
           </Link>
         </li>
 
-        <li>
+        <li data-tooltip-id="profile-tooltip" data-tooltip-place="right">
+          <Tooltip
+            id="profile-tooltip"
+            content="Profile"
+            style={{ zIndex: "9999" }}
+          />
           <Link
             href="/profile"
             className="flex items-center text-md text-black rounded-md p-2  transition-all hover:bg-[#081225] hover:text-white active:bg-[#081225]"
@@ -68,7 +85,12 @@ export default function MainNav() {
           </Link>
         </li>
 
-        <li>
+        <li data-tooltip-id="settings-tooltip" data-tooltip-place="right">
+          <Tooltip
+            id="settings-tooltip"
+            content="Settings"
+            style={{ zIndex: "9999" }}
+          />
           <Link
             href="/settings"
             className="flex items-center text-md text-black rounded-md p-2  transition-all hover:bg-[#081225] hover:text-white active:bg-[#081225]"

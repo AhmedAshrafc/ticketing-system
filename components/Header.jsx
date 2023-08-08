@@ -47,7 +47,7 @@ export default function Header() {
               placeholder="Search for anything..."
             />
 
-            <button className="bg-gray-200 block rounded-full w-[120px] lg:w-[100px] h-[40px] mx-auto mt-4 transition-all md:m-0 md:absolute md:left-[80%] md:peer-focus:left-[90%] md:top-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2 md:text-gray-500 md:bg-transparent md:border-none md:outline-none lg:text-lg hover:bg-gray-200 active:bg-gray-300">
+            <button className="bg-gray-200 block rounded-full w-[120px] lg:w-[15%] h-[40px] mx-auto mt-4 transition-all md:m-0 md:absolute md:left-[80%] md:peer-focus:left-[90%] md:top-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2 md:text-gray-500 md:bg-transparent md:border-none md:outline-none lg:text-lg hover:bg-gray-200 active:bg-gray-300">
               Search
             </button>
 
