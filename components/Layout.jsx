@@ -3,7 +3,7 @@ import Sidebar from "./Sidebar";
 
 export default function Layout({ children }) {
   return (
-    <div className="flex min-h-screen bg-gradient-to-b from-blue-400 to-blue-500 scrollbar">
+    <div className="flex min-h-screen bg-gradient-to-b from-[#141E30] to-[#243B55] scrollbar">
       <Sidebar />
       <div className="flex flex-col w-full">
         <Header />
