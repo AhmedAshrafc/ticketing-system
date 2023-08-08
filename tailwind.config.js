@@ -15,7 +15,7 @@ module.exports = {
         fluid: "repeat(auto-fit, minmax(15rem, 1fr))",
       },
       fontFamily: {
-        sans: ["Roboto", "sans-serif"],
+        sans: ["Oswald", "sans-serif"],
       },
     },
   },
