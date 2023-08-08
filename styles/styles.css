@@ -7,9 +7,10 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-image: linear-gradient(to bottom, #f59e0b, #fcd34d);
+  background-color: #1dbfc1;
+  /* background-image: linear-gradient(to bottom, #f59e0b, #fcd34d); */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: red;
+  background-color: orangered;
 }
