@@ -1,52 +1,12 @@
+import { useEffect } from "react";
+import { useRouter } from "next/router";
+
 export default function Home() {
-  return (
-    <div>
-      <h1>Main content of Dashboard</h1>
-      <h1>Main content of Dashboard</h1>
-      <h1>Main content of Dashboard</h1>
-      <h1>Main content of Dashboard</h1>
-      <h1>Main content of Dashboard</h1>
-      <h1>Main content of Dashboard</h1>
-      <h1>Main content of Dashboard</h1>
-      <h1>Main content of Dashboard</h1>
-      <h1>Main content of Dashboard</h1>
-      <h1>Main content of Dashboard</h1>
-      <h1>Main content of Dashboard</h1>
-      <h1>Main content of Dashboard</h1>
-      <h1>Main content of Dashboard</h1>
-      <h1>Main content of Dashboard</h1>
-      <h1>Main content of Dashboard</h1>
-      <h1>Main content of Dashboard</h1>
-      <h1>Main content of Dashboard</h1>
-      <h1>Main content of Dashboard</h1>
-      <h1>Main content of Dashboard</h1>
-      <h1>Main content of Dashboard</h1>
-      <h1>Main content of Dashboard</h1>
-      <h1>Main content of Dashboard</h1>
-      <h1>Main content of Dashboard</h1>
-      <h1>Main content of Dashboard</h1>
-      <h1>Main content of Dashboard</h1>
-      <h1>Main content of Dashboard</h1>
-      <h1>Main content of Dashboard</h1>
-      <h1>Main content of Dashboard</h1>
-      <h1>Main content of Dashboard</h1>
-      <h1>Main content of Dashboard</h1>
-      <h1>Main content of Dashboard</h1>
-      <h1>Main content of Dashboard</h1>
-      <h1>Main content of Dashboard</h1>
-      <h1>Main content of Dashboard</h1>
-      <h1>Main content of Dashboard</h1>
-      <h1>Main content of Dashboard</h1>
-      <h1>Main content of Dashboard</h1>
-      <h1>Main content of Dashboard</h1>
-      <h1>Main content of Dashboard</h1>
-      <h1>Main content of Dashboard</h1>
-      <h1>Main content of Dashboard</h1>
-      <h1>Main content of Dashboard</h1>
-      <h1>Main content of Dashboard</h1>
-      <h1>Main content of Dashboard</h1>
-      <h1>Main content of Dashboard</h1>
-      <h1>Main content of Dashboard</h1>
-    </div>
-  );
+  const router = useRouter();
+
+  useEffect(() => {
+    router.push("/dashboard");
+  }, []);
+
+  return null;
 }

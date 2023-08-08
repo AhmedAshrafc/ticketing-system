@@ -19,7 +19,7 @@ export default function MainNav() {
       <ul className="flex flex-col gap-4">
         <li>
           <Link
-            href="/"
+            href="/dashboard"
             className="flex items-center text-md text-black rounded-md p-2 transition-all hover:bg-[#081225] hover:text-white active:bg-[#081225]"
           >
             <div className="flex items-center gap-3">

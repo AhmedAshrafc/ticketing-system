@@ -43,7 +43,7 @@ export default function Header() {
             <IoSearchOutline className="text-gray-500 top-3 left-4 absolute md:top-1/2 md:left-4 md:transform md:-translate-y-1/2 lg:text-lg" />
             <input
               type="text"
-              className="bg-gray-100 block w-11/12 peer focus:w-full border-none caret-yellow-400 outline-none transition-all py-2 px-8 lg:py-4 lg:px-10 lg:text-lg rounded-full pl-10 "
+              className="bg-gray-100 block w-11/12 peer focus:w-full border-none caret-yellow-400 outline-none transition-all py-2 px-8 lg:px-10 lg:text-lg rounded-full pl-10 "
               placeholder="Search for anything..."
             />
 
