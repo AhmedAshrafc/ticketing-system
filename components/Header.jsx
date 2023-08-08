@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Link from "next/link";
+
 import {
   IoLogOutOutline,
   IoInvertMode,
@@ -6,7 +8,6 @@ import {
 } from "react-icons/io5";
 
 import logo from "../public/avatar.png";
-import Link from "next/link";
 
 export default function Header() {
   return (
@@ -37,24 +38,20 @@ export default function Header() {
           </div>
         </div>
 
-        {/* <div className="md:flex md:justify-center bg-green-500">
-          <div className="md:grow relative">
-            <IoSearchOutline className="absolute top-1/2 left-3 transform -translate-y-1/2 text-gray-500" />
-            <input
-              type="text"
-              className="bg-gray-100 block w-11/12 focus:w-full border-none caret-yellow-400 outline-none md:focus:w-[66%] transition-all py-2 px-6 lg:py-4 lg:px-8 rounded-full md:w-[60%] pl-10"
-              placeholder="Search..."
-            />
-          </div>
-        </div> */}
         <div className="md:flex md:justify-center">
-          <div className="relative w-full md:w-[60%]">
-            <IoSearchOutline className="absolute top-1/2 left-4 transform -translate-y-1/2 text-gray-500" />
+          <div className="relative w-full md:w-[60%] ">
+            <IoSearchOutline className="text-gray-500 top-3 left-4 absolute md:top-1/2 md:left-4 md:transform md:-translate-y-1/2 lg:text-lg" />
             <input
               type="text"
-              className="bg-gray-100 block w-11/12 focus:w-full border-none caret-yellow-400 outline-none transition-all py-2 px-8 lg:py-4 lg:px-10  rounded-full pl-10"
-              placeholder="Search..."
+              className="bg-gray-100 block w-11/12 peer focus:w-full border-none caret-yellow-400 outline-none transition-all py-2 px-8 lg:py-4 lg:px-10 lg:text-lg rounded-full pl-10 "
+              placeholder="Search for anything..."
             />
+
+            <button className="bg-gray-200 block rounded-full w-[120px] lg:w-[100px] h-[40px] mx-auto mt-4 transition-all md:m-0 md:absolute md:left-[80%] md:peer-focus:left-[90%] md:top-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2 md:text-gray-500 md:bg-transparent md:border-none md:outline-none lg:text-lg hover:bg-gray-200 active:bg-gray-300">
+              Search
+            </button>
+
+            <div className="md:bg-gray-300 md:transition-all md:absolute md:peer-focus:left-[80%] md:left-[70%] md:top-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2 md:w-0.5 md:h-4 lg:h-6"></div>
           </div>
         </div>
       </div>
