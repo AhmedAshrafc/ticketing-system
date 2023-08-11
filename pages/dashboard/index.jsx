@@ -1,8 +1,11 @@
+import DynamicTitle from "@/components/DynamicTitle";
 import { HiUsers } from "react-icons/hi2";
 
 export default function Dashboard() {
   return (
     <>
+      <DynamicTitle />
+
       <h2 className="font-semibold text-2xl w-fit relative mb-12 mx-auto">
         Fake User's Stats
       </h2>

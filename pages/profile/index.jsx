@@ -1,3 +1,10 @@
+import DynamicTitle from "@/components/DynamicTitle";
+
 export default function Profile() {
-  return <h1>Profile</h1>;
+  return (
+    <>
+      <DynamicTitle />
+      <h1>Profile</h1>
+    </>
+  );
 }

@@ -1,3 +1,10 @@
+import DynamicTitle from "@/components/DynamicTitle";
+
 export default function Settings() {
-  return <h1>Settings</h1>;
+  return (
+    <>
+      <DynamicTitle />
+      <h1>Settings</h1>
+    </>
+  );
 }
