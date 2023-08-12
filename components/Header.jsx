@@ -11,7 +11,7 @@ import logo from "../public/avatar.png";
 
 export default function Header() {
   return (
-    <header className="bg-gradient-to-r from-[#eeaeca]  to-[#94bbe9] p-4 text-sm flex flex-col gap-4 md:m-4 md:rounded-xl">
+    <header className="bg-primary-color p-4 text-sm flex flex-col gap-4 md:m-4 md:rounded-xl">
       <h1 className="font-semibold uppercase md:text-md lg:text-lg">
         Alexandria Urology Hospital
       </h1>
@@ -43,7 +43,7 @@ export default function Header() {
             <IoSearchOutline className="text-gray-500 top-3 left-4 absolute md:top-1/2 md:left-4 md:transform md:-translate-y-1/2 lg:text-lg" />
             <input
               type="text"
-              className="bg-gray-100 block w-11/12 peer focus:w-full border-none caret-yellow-400 outline-none transition-all py-2 px-8 lg:px-10 lg:text-lg rounded-full pl-10 "
+              className="bg-gray-100 block w-11/12 peer focus:w-full border-none caret-primary-color outline-none transition-all py-2 px-8 lg:px-10 lg:text-lg rounded-full pl-10 "
               placeholder="Search for anything..."
             />
 
