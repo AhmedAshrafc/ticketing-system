@@ -13,6 +13,7 @@ export default function App({ Component, pageProps }) {
   const router = useRouter();
 
   const validRoutes = [
+    "/",
     "/dashboard",
     "/projects",
     "/profile",
