@@ -8,8 +8,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "primary-color": "#cecfcf",
-        "main-bg-color": "#b5c2ca",
+        "primary-color": "#6DCAE1",
+        "secondary-color": "#72B948",
       },
       gridTemplateColumns: {
         fluid: "repeat(auto-fill, minmax(250px, 1fr))",
