@@ -3,14 +3,9 @@ import Script from "next/script";
 
 import { Tooltip } from "react-tooltip";
 
-import {
-  IoHome,
-  IoLogoAppleAr,
-  IoPersonCircleOutline,
-  IoSettingsSharp,
-} from "react-icons/io5";
+import { CiLogout, CiDark } from "react-icons/ci";
 
-export default function MainNav() {
+export default function MainNav({ isOpen }) {
   return (
     <>
       <Script
@@ -18,7 +13,7 @@ export default function MainNav() {
         strategy="lazyOnload"
       />
 
-      <ul className="flex flex-col gap-4">
+      <ul className="flex flex-col gap-4 items-center md:items-stretch">
         <li data-tooltip-id="dashboard-tooltip" data-tooltip-place="right">
           <Tooltip
             id="dashboard-tooltip"
@@ -36,7 +31,13 @@ export default function MainNav() {
                 colors="outline:#131432,primary:#92140c,secondary:#f24c00,tertiary:#b26836,quaternary:#ebe6ef"
                 style={{ width: "30px", height: "30px" }}
               ></lord-icon>
-              <span className="hidden md:inline-block">Dashboard</span>
+              <span
+                className={`hidden md:inline-block duration-300 ${
+                  !isOpen && "scale-0"
+                }`}
+              >
+                Dashboard
+              </span>
             </div>
           </Link>
         </li>
@@ -58,7 +59,13 @@ export default function MainNav() {
                 colors="outline:#131432,primary:#606874,secondary:#4bb3fd,tertiary:#ebe6ef"
                 style={{ width: "30px", height: "30px" }}
               ></lord-icon>
-              <span className="hidden md:inline-block">Projects</span>
+              <span
+                className={`hidden md:inline-block duration-300 ${
+                  !isOpen && "scale-0"
+                }`}
+              >
+                Projects
+              </span>
             </div>
           </Link>
         </li>
@@ -80,7 +87,13 @@ export default function MainNav() {
                 colors="outline:#121331,primary:#ffc738,secondary:#4bb3fd"
                 style={{ width: "30px", height: "30px" }}
               ></lord-icon>
-              <span className="hidden md:inline-block">Profile</span>
+              <span
+                className={`hidden md:inline-block duration-300 ${
+                  !isOpen && "scale-0"
+                }`}
+              >
+                Profile
+              </span>
             </div>
           </Link>
         </li>
@@ -102,10 +115,54 @@ export default function MainNav() {
                 colors="outline:#121331,primary:#646e78"
                 style={{ width: "30px", height: "30px" }}
               ></lord-icon>
-              <span className="hidden md:inline-block">Settings</span>
+              <span
+                className={`hidden md:inline-block duration-300 ${
+                  !isOpen && "scale-0"
+                }`}
+              >
+                Settings
+              </span>
             </div>
           </Link>
         </li>
+
+        <div className="mt-24">
+          <li>
+            <Link
+              href="/logout"
+              className="flex items-center text-md text-black rounded-md p-2 transition-all hover:bg-[#081225] hover:text-white active:bg-[#081225]"
+            >
+              <div className="flex items-center gap-3">
+                <CiLogout className="text-xl text-red-600" />
+                <span
+                  className={`hidden md:inline-block duration-300 font-semibold ${
+                    !isOpen && "scale-0"
+                  }`}
+                >
+                  Logout
+                </span>
+              </div>
+            </Link>
+          </li>
+
+          <li className="group">
+            <Link
+              href="/darkmode"
+              className="flex items-center text-md text-black rounded-md p-2 transition-all group-hover:bg-[#081225] group-hover:text-white group-active:bg-[#081225]"
+            >
+              <div className="flex items-center gap-3">
+                <CiDark className="text-xl text-black group-hover:text-white transition-all" />
+                <span
+                  className={`hidden md:inline-block duration-300 font-semibold ${
+                    !isOpen && "scale-0"
+                  }`}
+                >
+                  DarkMode
+                </span>
+              </div>
+            </Link>
+          </li>
+        </div>
       </ul>
     </>
   );
