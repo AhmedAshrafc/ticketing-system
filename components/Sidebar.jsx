@@ -3,6 +3,10 @@ import MainNav from "./MainNav";
 
 import { useState } from "react";
 
+import avatar from "../public/avatar.png";
+import Image from "next/image";
+import Link from "next/link";
+
 export default function Sidebar() {
   const [isOpen, setIsOpen] = useState(true);
 
@@ -30,6 +34,30 @@ export default function Sidebar() {
       />
       <Logo />
       <MainNav isOpen={isOpen} />
+      <div className="border-t pt-3 flex items-center justify-center md:items-start md:justify-normal mt-4">
+        <Link href="/profile">
+          <Image
+            src={avatar}
+            alt="Profile Picture"
+            className="w-10 h-10 rounded-full"
+            quality={100}
+            width={200}
+            height={200}
+            priority
+            placeholder="blur"
+          />
+        </Link>
+        <div
+          className={`hidden md:flex md:justify-between md:items-center md:w-52 md:ml-3 ${
+            !isOpen && "scale-0"
+          }`}
+        >
+          <div className="leading-4">
+            <h4 className="font-semibold">Welcome, John Doe</h4>
+            <span className="text-xs text-gray-600">johndoe@gmail.com</span>
+          </div>
+        </div>
+      </div>
     </aside>
   );
 }

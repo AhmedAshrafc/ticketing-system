@@ -151,13 +151,13 @@ export default function MainNav({ isOpen }) {
               className="flex items-center text-md text-black rounded-md p-2 transition-all group-hover:bg-[#081225] group-hover:text-white group-active:bg-[#081225]"
             >
               <div className="flex items-center gap-3">
-                <CiDark className="text-xl text-black group-hover:text-white transition-all" />
+                <CiDark className="text-xl min-w-[20px] text-black group-hover:text-white transition-all" />
                 <span
                   className={`hidden md:inline-block duration-300 font-semibold ${
                     !isOpen && "scale-0"
                   }`}
                 >
-                  DarkMode
+                  Dark Mode
                 </span>
               </div>
             </Link>
