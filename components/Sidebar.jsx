@@ -32,7 +32,7 @@ export default function Sidebar() {
         }`}
         onClick={toggleSidebar}
       />
-      <Logo />
+      <Logo isOpen={isOpen}/>
       <MainNav isOpen={isOpen} />
       <div className="border-t pt-3 flex items-center justify-center md:items-start md:justify-normal mt-4">
         <Link href="/profile">
