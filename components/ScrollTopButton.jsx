@@ -15,7 +15,7 @@ export default function ScrollTopButton() {
     const toggleVisibility = () => {
       const currentScrollPos = window.scrollY;
 
-      if (currentScrollPos > 500 && currentScrollPos > prevScrollPos.current) {
+      if (currentScrollPos > 300 && currentScrollPos > prevScrollPos.current) {
         setIsVisible(true);
       } else {
         setIsVisible(false);
@@ -33,7 +33,7 @@ export default function ScrollTopButton() {
     <>
       {isVisible && (
         <button
-          className="fixed bottom-4 right-4 bg-[#243B55] text-white p-2 rounded-full shadow-2xl transition duration-500 ease-in-out transform hover:scale-110 hover:bg-[#141E30]"
+          className="fixed bottom-4 right-4 bg-[#243B55] z-50 text-white p-2 rounded-full shadow-2xl transition duration-500 ease-in-out transform hover:scale-110 hover:bg-[#141E30]"
           onClick={() => {
             scrollToTop();
           }}

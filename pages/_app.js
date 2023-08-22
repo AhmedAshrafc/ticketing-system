@@ -3,11 +3,11 @@ import { useRouter } from "next/router";
 import Custom404 from "./404";
 
 import "@/styles/globals.css";
-import "@/styles/styles.css";
 
 import "primereact/resources/themes/lara-light-indigo/theme.css";
 import "primereact/resources/primereact.min.css";
 import "primeicons/primeicons.css";
+
 import "react-tooltip/dist/react-tooltip.css";
 
 export default function App({ Component, pageProps }) {

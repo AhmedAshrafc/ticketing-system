@@ -22,7 +22,7 @@ export default function Sidebar() {
 
     <aside
       className={`${
-        isOpen ? "w-72" : "w-20"
+        isOpen ? "w-64" : "w-20"
       } duration-300 dark:bg-[#111827] p-2 md:p-4 bg-primary-color relative shadow-2xl`}
     >
       <img
@@ -39,10 +39,10 @@ export default function Sidebar() {
           <Image
             src={avatar}
             alt="Profile Picture"
-            className="w-10 h-10 rounded-full"
+            className="min-w-[40px] min-h-[40px] rounded-full"
             quality={100}
-            width={200}
-            height={200}
+            width={40}
+            height={40}
             priority
             placeholder="blur"
           />
