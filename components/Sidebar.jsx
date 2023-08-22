@@ -23,7 +23,7 @@ export default function Sidebar() {
     <aside
       className={`${
         isOpen ? "w-72" : "w-20"
-      } duration-300 p-2 md:p-4 bg-primary-color relative shadow-2xl`}
+      } duration-300 dark:bg-[#111827] p-2 md:p-4 bg-primary-color relative shadow-2xl`}
     >
       <img
         src="/control.png"
@@ -32,7 +32,7 @@ export default function Sidebar() {
         }`}
         onClick={toggleSidebar}
       />
-      <Logo isOpen={isOpen}/>
+      <Logo isOpen={isOpen} />
       <MainNav isOpen={isOpen} />
       <div className="border-t pt-3 flex items-center justify-center md:items-start md:justify-normal mt-4">
         <Link href="/profile">
@@ -53,7 +53,9 @@ export default function Sidebar() {
           }`}
         >
           <div className="leading-4">
-            <h4 className="font-semibold">Welcome, John Doe</h4>
+            <h4 className="font-semibold text-black dark:text-white duration-300">
+              Welcome, John Doe
+            </h4>
             <span className="text-xs text-gray-600">johndoe@gmail.com</span>
           </div>
         </div>

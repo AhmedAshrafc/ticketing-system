@@ -10,6 +10,7 @@ import {
   LuSettings,
   LuInbox,
 } from "react-icons/lu";
+import DarkModeToggle from "./DarkModeToggle";
 
 export default function MainNav({ isOpen }) {
   return (
@@ -17,7 +18,7 @@ export default function MainNav({ isOpen }) {
       <span className="hidden md:inline-block text-xs mb-4 uppercase text-gray-500">
         Overview
       </span>
-      <ul className="flex flex-col gap-4 items-center md:items-stretch">
+      <ul className="flex flex-col gap-4 items-center md:items-stretch ">
         <li data-tooltip-id="dashboard-tooltip" data-tooltip-place="right">
           {!isOpen && (
             <Tooltip
@@ -28,7 +29,7 @@ export default function MainNav({ isOpen }) {
           )}
           <Link
             href="/dashboard"
-            className="flex items-center text-md text-black rounded-md p-2 transition-all hover:bg-[#081225] hover:text-white active:bg-[#081225]"
+            className="flex items-center text-md text-black dark:text-white rounded-md p-2 transition-all hover:bg-[#081225] dark:hover:bg-secondary-color hover:text-white active:bg-[#081225]"
           >
             <div className="flex items-center gap-3">
               <LuLayoutDashboard className="md:ml-2" />
@@ -53,7 +54,7 @@ export default function MainNav({ isOpen }) {
           )}
           <Link
             href="/projects"
-            className="flex items-center text-md text-black rounded-md p-2  transition-all hover:bg-[#081225] hover:text-white active:bg-[#081225]"
+            className="flex items-center text-md text-black dark:text-white rounded-md p-2  transition-all hover:bg-[#081225] dark:hover:bg-secondary-color hover:text-white active:bg-[#081225]"
           >
             <div className="flex items-center gap-3">
               <LuWallpaper className="md:ml-2" />
@@ -78,7 +79,7 @@ export default function MainNav({ isOpen }) {
           )}
           <Link
             href="/profile"
-            className="flex items-center text-md text-black rounded-md p-2  transition-all hover:bg-[#081225] hover:text-white active:bg-[#081225]"
+            className="flex items-center text-md text-black dark:text-white rounded-md p-2  transition-all hover:bg-[#081225] dark:hover:bg-secondary-color hover:text-white active:bg-[#081225]"
           >
             <div className="flex items-center gap-3">
               <LuUser className="md:ml-2" />
@@ -103,7 +104,7 @@ export default function MainNav({ isOpen }) {
           )}
           <Link
             href="/settings"
-            className="flex items-center text-md text-black rounded-md p-2  transition-all hover:bg-[#081225] hover:text-white active:bg-[#081225]"
+            className="flex items-center text-md text-black dark:text-white rounded-md p-2  transition-all hover:bg-[#081225] dark:hover:bg-secondary-color hover:text-white active:bg-[#081225]"
           >
             <div className="flex items-center gap-3">
               <LuSettings className="md:ml-2" />
@@ -118,7 +119,7 @@ export default function MainNav({ isOpen }) {
           </Link>
         </li>
 
-        <div className="mt-24">
+        <div className="mt-18">
           <span className="hidden md:inline-block text-xs mb-4 uppercase text-gray-500">
             Account
           </span>
@@ -137,10 +138,10 @@ export default function MainNav({ isOpen }) {
             )}
             <Link
               href="/inbox"
-              className="flex items-center text-md text-black rounded-md p-2 transition-all group-hover:bg-[#081225] group-hover:text-white group-active:bg-[#081225]"
+              className="flex items-center text-md text-black dark:text-white rounded-md p-2 transition-all group-hover:bg-[#081225] group-hover:text-white dark:hover:bg-secondary-color group-active:bg-[#081225]"
             >
               <div className="flex items-center gap-3">
-                <LuInbox className=" min-w-[20px] text-black group-hover:text-white transition-all ml-1" />
+                <LuInbox className=" min-w-[20px] text-black dark:text-white group-hover:text-white transition-all ml-2" />
                 <div className="md:flex md:gap-24 md:items-center">
                   <span
                     className={`hidden md:inline-block duration-300 font-semibold ${
@@ -162,34 +163,7 @@ export default function MainNav({ isOpen }) {
             </Link>
           </li>
 
-          <li
-            className="group"
-            data-tooltip-id="darkmode-tooltip"
-            data-tooltip-place="right"
-          >
-            {!isOpen && (
-              <Tooltip
-                id="darkmode-tooltip"
-                content="Dark Mode"
-                style={{ zIndex: "9999" }}
-              />
-            )}
-            <Link
-              href="/darkmode"
-              className="flex items-center text-md text-black rounded-md p-2 transition-all group-hover:bg-[#081225] group-hover:text-white group-active:bg-[#081225]"
-            >
-              <div className="flex items-center gap-3">
-                <CiDark className=" min-w-[20px] text-black group-hover:text-white transition-all ml-1" />
-                <span
-                  className={`hidden md:inline-block duration-300 font-semibold ${
-                    !isOpen && "scale-0"
-                  }`}
-                >
-                  Dark Mode
-                </span>
-              </div>
-            </Link>
-          </li>
+          <DarkModeToggle isOpen={isOpen} />
 
           <li data-tooltip-id="logout-tooltip" data-tooltip-place="right">
             {!isOpen && (
@@ -201,10 +175,10 @@ export default function MainNav({ isOpen }) {
             )}
             <Link
               href="/logout"
-              className="flex items-center text-md text-black rounded-md p-2 transition-all hover:bg-[#081225] hover:text-white active:bg-[#081225]"
+              className="flex items-center text-md text-black dark:text-white rounded-md p-2 transition-all hover:bg-[#081225] dark:hover:bg-secondary-color hover:text-white active:bg-[#081225]"
             >
               <div className="flex items-center gap-3">
-                <CiLogout className=" text-red-600 ml-1" />
+                <CiLogout className=" text-red-600 ml-2" />
                 <span
                   className={`hidden md:inline-block duration-300 font-semibold ${
                     !isOpen && "scale-0"

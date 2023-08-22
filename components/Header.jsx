@@ -11,13 +11,13 @@ import logo from "../public/avatar.png";
 
 export default function Header() {
   return (
-    <header className="bg-primary-color p-4 text-sm flex flex-col gap-4 md:m-4 md:rounded-xl">
-      <h1 className="font-semibold uppercase md:text-md lg:text-lg">
+    <header className="bg-primary-color dark:bg-[#111827] duration-300 p-4 text-sm flex flex-col gap-4 md:m-4 md:rounded-xl">
+      {/* <h1 className="font-semibold uppercase md:text-md lg:text-lg">
         Alexandria Urology Hospital
-      </h1>
+      </h1> */}
 
       <div className="flex flex-col gap-8">
-        <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+        {/* <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           <div className="flex items-center justify-center gap-4 md:justify-start">
             <span className="inline-block capitalize">welcome, fake user</span>
             <Link href="/profile">
@@ -30,13 +30,13 @@ export default function Header() {
                 className="rounded-full shadow-sm cursor-pointer w-[32px]"
               />
             </Link>
-          </div>
+          </div> */}
 
-          <div className="flex items-center justify-center gap-4 pr-4">
+        {/* <div className="flex items-center justify-center gap-4 pr-4">
             <IoLogOutOutline className="cursor-pointer md:text-lg" />
             <IoInvertMode className="cursor-pointer md:text-lg" />
-          </div>
-        </div>
+          </div> */}
+        {/* </div> */}
 
         <div className="md:flex md:justify-center">
           <div className="relative w-full md:w-[60%] ">
