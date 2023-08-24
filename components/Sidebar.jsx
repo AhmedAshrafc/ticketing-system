@@ -1,11 +1,11 @@
-import Logo from "./Logo";
-import MainNav from "./MainNav";
-
 import { useState } from "react";
 
-import avatar from "../public/avatar.png";
 import Image from "next/image";
 import Link from "next/link";
+
+import Logo from "./Logo";
+import MainNav from "./MainNav";
+import avatar from "../public/avatar.png";
 
 export default function Sidebar() {
   const [isOpen, setIsOpen] = useState(true);
@@ -15,11 +15,6 @@ export default function Sidebar() {
   };
 
   return (
-    // <aside className="bg-primary-color p-2 md:p-8 relative w-[62px] md:w-[250px] shadow-2xl">
-    //   <Logo />
-    //   <MainNav />
-    // </aside>
-
     <aside
       className={`${
         isOpen ? "w-64" : "w-20"
@@ -32,7 +27,9 @@ export default function Sidebar() {
         }`}
         onClick={toggleSidebar}
       />
-      <Logo isOpen={isOpen} />
+      <div className="flex items-center justify-center">
+        <Logo isOpen={isOpen} />
+      </div>
       <MainNav isOpen={isOpen} />
       <div className="border-t pt-3 flex items-center justify-center md:items-start md:justify-normal mt-4">
         <Link href="/profile">

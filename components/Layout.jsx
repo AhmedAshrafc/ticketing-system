@@ -1,6 +1,6 @@
 import Header from "./Header";
-import ScrollTopButton from "./ScrollTopButton";
 import Sidebar from "./Sidebar";
+import ScrollTopButton from "./ScrollTopButton";
 
 export default function Layout({ children }) {
   return (

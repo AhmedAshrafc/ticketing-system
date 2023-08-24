@@ -1,14 +1,18 @@
 import DynamicTitle from "@/components/DynamicTitle";
 
 import React, { useState } from "react";
+
+import { useForm } from "react-hook-form";
+
+import { IoSearchOutline } from "react-icons/io5";
+
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer, toast } from "react-toastify";
+
 import { DataTable } from "primereact/datatable";
 import { Column } from "primereact/column";
 import { Button } from "primereact/button";
 import { Dialog } from "primereact/dialog";
-import { useForm } from "react-hook-form";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import { IoSearchOutline } from "react-icons/io5";
 
 export default function Projects() {
   const [projects, setProjects] = useState([]);
@@ -369,7 +373,7 @@ export default function Projects() {
         label="Create new project"
         icon="pi pi-plus"
         onClick={openCreateModal}
-        className="self-center md:self-end"
+        className="self-center md:self-end hover:!bg-secondary-color !border-none"
       />
       {projects.length > 0 ? (
         <DataTable value={projects}>
