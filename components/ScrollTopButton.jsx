@@ -33,14 +33,14 @@ export default function ScrollTopButton() {
     <>
       {isVisible && (
         <button
-          className="fixed bottom-4 right-4 bg-[#243B55] z-50 text-white p-2 rounded-full shadow-2xl transition duration-500 ease-in-out transform hover:scale-110 hover:bg-[#141E30]"
+          className="fixed bottom-4 right-4 bg-primary-color z-50 text-white p-2 rounded-full shadow-2xl transition duration-200 ease-in-out transform hover:scale-110 hover:bg-secondary-color"
           onClick={() => {
             scrollToTop();
           }}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6 text-white animate-bounce"
+            className="h-6 w-6 text-black animate-bounce"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
