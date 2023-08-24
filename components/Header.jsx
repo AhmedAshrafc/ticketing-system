@@ -1,60 +1,49 @@
-import Image from "next/image";
+import React from "react";
+
 import Link from "next/link";
+import Image from "next/image";
 
-import {
-  IoLogOutOutline,
-  IoInvertMode,
-  IoSearchOutline,
-} from "react-icons/io5";
+import { useRouter } from "next/router";
 
-import logo from "../public/avatar.png";
+import favicon from "../public/favicon.png";
 
-export default function Header() {
+const Header = () => {
+  const router = useRouter();
+
+  const pageTitles = {
+    "/dashboard": "Dashboard",
+    "/projects": "Projects",
+    "/settings": "Settings",
+    "/profile": "Profile",
+  };
+
+  const currentPage = Object.keys(pageTitles).find((route) =>
+    router.pathname.startsWith(route)
+  );
+  const pageTitle = currentPage ? pageTitles[currentPage] : "";
+
   return (
-    <header className="bg-primary-color dark:bg-[#111827] duration-300 p-4 text-sm flex flex-col gap-4 md:m-4 md:rounded-xl">
-      {/* <h1 className="font-semibold uppercase md:text-md lg:text-lg">
-        Alexandria Urology Hospital
-      </h1> */}
-
-      <div className="flex flex-col gap-8">
-        {/* <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-          <div className="flex items-center justify-center gap-4 md:justify-start">
-            <span className="inline-block capitalize">welcome, fake user</span>
-            <Link href="/profile">
-              <Image
-                src={logo}
-                alt="User Profile Picture"
-                quality={100}
-                placeholder="blur"
-                priority
-                className="rounded-full shadow-sm cursor-pointer w-[32px]"
-              />
-            </Link>
-          </div> */}
-
-        {/* <div className="flex items-center justify-center gap-4 pr-4">
-            <IoLogOutOutline className="cursor-pointer md:text-lg" />
-            <IoInvertMode className="cursor-pointer md:text-lg" />
-          </div> */}
-        {/* </div> */}
-
-        <div className="md:flex md:justify-center">
-          <div className="relative w-full md:w-[60%] ">
-            <IoSearchOutline className="text-gray-500 top-3 left-4 absolute md:top-1/2 md:left-4 md:transform md:-translate-y-1/2 lg:text-lg" />
-            <input
-              type="text"
-              className="bg-gray-100 block w-11/12 peer focus:w-full border-none caret-primary-color outline-none transition-all py-2 px-8 lg:px-10 lg:text-lg rounded-full pl-10 "
-              placeholder="Search for anything..."
-            />
-
-            <button className="bg-gray-200 block rounded-full w-[120px] lg:w-[15%] h-[40px] mx-auto mt-4 transition-all md:m-0 md:absolute md:left-[80%] md:peer-focus:left-[90%] md:top-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2 md:text-gray-500 md:bg-transparent md:border-none md:outline-none lg:text-lg hover:bg-gray-200 active:bg-gray-300">
-              Search
-            </button>
-
-            <div className="md:bg-gray-300 md:transition-all md:absolute md:peer-focus:left-[80%] md:left-[70%] md:top-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2 md:w-0.5 md:h-4 lg:h-6"></div>
-          </div>
+    <header className="flex flex-col md:flex-row gap-2 items-center justify-between py-4 px-8 duration-300 bg-gray-200 dark:bg-gray-600 dark:text-white">
+      <h1 className="text-2xl font-semibold uppercase">{pageTitle}</h1>
+      <Link href="/dashboard">
+        <div className="flex items-center space-x-2">
+          <Image
+            src={favicon}
+            alt="Logo"
+            quality={100}
+            width={200}
+            height={200}
+            priority
+            placeholder="blur"
+            className="w-5 h-5"
+          />
+          <span className="font-semibold text-xs">
+            Alexandria Urology Hospital
+          </span>
         </div>
-      </div>
+      </Link>
     </header>
   );
-}
+};
+
+export default Header;
