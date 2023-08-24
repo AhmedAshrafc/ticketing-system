@@ -1,6 +1,6 @@
-import Link from "next/link";
-import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
+import Link from "next/link";
 
 export default function Custom404() {
   const [isClient, setIsClient] = useState(false);
@@ -19,7 +19,7 @@ export default function Custom404() {
         exist.
       </p>
       <p className="text-2xl font-bold">
-        <Link href="/dashboard" className="text-blue-500">
+        <Link href="/dashboard" className="text-primary-color underline">
           Go back to dashboard
         </Link>
       </p>

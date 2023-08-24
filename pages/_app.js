@@ -1,5 +1,5 @@
-import Layout from "@/components/Layout";
 import { useRouter } from "next/router";
+import Layout from "@/components/Layout";
 import Custom404 from "./404";
 
 import "@/styles/globals.css";
@@ -26,7 +26,7 @@ export default function App({ Component, pageProps }) {
     return <Custom404 />;
   }
 
-  // render login page without layout
+  // to render the login page without the layout
   if (router.asPath === "/login") {
     return <Component {...pageProps} />;
   }
