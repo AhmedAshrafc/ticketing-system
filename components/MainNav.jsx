@@ -19,7 +19,7 @@ export default function MainNav({ isOpen }) {
       <span className="text-xs mb-4 uppercase text-center md:text-left block text-gray-500 ">
         Overview
       </span>
-      <ul className="flex flex-col gap-4 items-center md:items-stretch ">
+      <ul className="flex flex-col gap-4 md:items-stretch ">
         <li data-tooltip-id="dashboard-tooltip" data-tooltip-place="right">
           {!isOpen && (
             <Tooltip
@@ -30,7 +30,7 @@ export default function MainNav({ isOpen }) {
           )}
           <Link
             href="/dashboard"
-            className="flex items-center text-md text-black dark:text-white rounded-md p-2 transition-all hover:bg-secondary-color dark:hover:bg-secondary-color hover:text-white active:bg-secondary-color"
+            className="flex items-center justify-center md:justify-start text-md w-full text-black dark:text-white rounded-md p-2 transition-all hover:bg-secondary-color dark:hover:bg-secondary-color hover:text-white active:bg-secondary-color"
           >
             <div className="flex items-center gap-3">
               <LuLayoutDashboard className="md:ml-2" />
@@ -55,7 +55,7 @@ export default function MainNav({ isOpen }) {
           )}
           <Link
             href="/projects"
-            className="flex items-center text-md text-black dark:text-white rounded-md p-2  transition-all hover:bg-secondary-color dark:hover:bg-secondary-color hover:text-white active:bg-secondary-color"
+            className="flex items-center justify-center md:justify-start text-md text-black dark:text-white rounded-md p-2  transition-all hover:bg-secondary-color dark:hover:bg-secondary-color hover:text-white active:bg-secondary-color"
           >
             <div className="flex items-center gap-3">
               <LuWallpaper className="md:ml-2" />
@@ -80,7 +80,7 @@ export default function MainNav({ isOpen }) {
           )}
           <Link
             href="/profile"
-            className="flex items-center text-md text-black dark:text-white rounded-md p-2  transition-all hover:bg-secondary-color dark:hover:bg-secondary-color hover:text-white active:bg-secondary-color"
+            className="flex items-center justify-center md:justify-start text-md text-black dark:text-white rounded-md p-2  transition-all hover:bg-secondary-color dark:hover:bg-secondary-color hover:text-white active:bg-secondary-color"
           >
             <div className="flex items-center gap-3">
               <LuUser className="md:ml-2" />
@@ -105,7 +105,7 @@ export default function MainNav({ isOpen }) {
           )}
           <Link
             href="/settings"
-            className="flex items-center text-md text-black dark:text-white rounded-md p-2  transition-all hover:bg-secondary-color dark:hover:bg-secondary-color hover:text-white active:bg-secondary-color"
+            className="flex items-center justify-center md:justify-start text-md text-black dark:text-white rounded-md p-2  transition-all hover:bg-secondary-color dark:hover:bg-secondary-color hover:text-white active:bg-secondary-color"
           >
             <div className="flex items-center gap-3">
               <LuSettings className="md:ml-2" />
