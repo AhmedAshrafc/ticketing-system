@@ -1,4 +1,8 @@
 import { useRouter } from "next/router";
+
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+
 import Layout from "@/components/Layout";
 import Custom404 from "./404";
 
@@ -11,6 +15,7 @@ import "primeicons/primeicons.css";
 import "react-tooltip/dist/react-tooltip.css";
 
 export default function App({ Component, pageProps }) {
+  const queryClient = new QueryClient();
   const router = useRouter();
 
   const validRoutes = [
@@ -33,9 +38,12 @@ export default function App({ Component, pageProps }) {
 
   return (
     <>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <QueryClientProvider client={queryClient}>
+        <ReactQueryDevtools initialIsOpen={false} />
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </QueryClientProvider>
     </>
   );
 }
